@@ -20,7 +20,7 @@ export const dialogueData: DialogueStep[] = [
   },
   {
     id: 3,
-    text: "but there a saying",
+    text: "but there a saying that",
     image: "/images/ccss_v2.png",
     buttonText: "Next",
   },

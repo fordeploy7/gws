@@ -1,0 +1,26 @@
+.button {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    background-color: #ff007f;
+    /* Vibrant pink for emphasis */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(255, 0, 127, 0.4);
+}
+
+.button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 0, 127, 0.6);
+}
+
+.button:active {
+    transform: scale(0.95);
+}

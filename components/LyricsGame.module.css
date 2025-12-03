@@ -1,0 +1,101 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+}
+
+.lyricsText {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    font-family: 'Outfit', sans-serif;
+}
+
+.input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #ff007f;
+    color: #ff007f;
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    width: 200px;
+    text-align: center;
+    outline: none;
+    font-family: 'Outfit', sans-serif;
+}
+
+.input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    min-height: 30px;
+    font-weight: bold;
+}
+
+.success {
+    color: #4caf50;
+}
+
+.error {
+    color: #f44336;
+}
+
+.button {
+    margin-top: 30px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
+
+.completionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.completionText {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+}
+
+.heart {
+    font-size: 4rem;
+    animation: beat 1s infinite;
+}
+
+@keyframes beat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
