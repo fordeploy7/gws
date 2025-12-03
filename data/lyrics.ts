@@ -22,7 +22,22 @@ export const lyricsData: LyricLevel[] = [
         id: 3,
         fullText: "Khamoshiyan bhi baatein karein, Jab tu",
         missingPart: "pyaar se kuch aisa kahe",
-        keywords: ["pyaar", "kuch", "aisa", "kahe"],
+        keywords: ["pyaar", "kuch", "aisa", "kahes"],
+    },
+    {
+        id: 4,
+        fullText: "Tried to change myself for you,But",
+        missingPart: "we couldn't see it through",
+        keywords: ["coudnt", "see", "through"],
+    },
+    {
+        id: 5,
+        fullText: "aise koi hove mulaqaat,",
+        missingPart: "ni tu pul pawe na mai pul pawa",
+        keywords: ["pul", "pawe", "bhul"],
     },
     // Add more levels here
+
+
+    //ise koi howe mulaqaat , ni tu pul pawe na mai pul pawa
 ];

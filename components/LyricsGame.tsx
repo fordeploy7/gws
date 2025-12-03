@@ -32,6 +32,8 @@ const LyricsGame: React.FC = () => {
   const [feedback, setFeedback] = useState<{ type: 'success' | 'error' | null; text: string }>({ type: null, text: '' });
   const [isComplete, setIsComplete] = useState(false);
 
+  const [giftClaimed, setGiftClaimed] = useState(false);
+
   const currentLyric = lyricsData[currentLevel];
 
   const handleCheck = () => {
@@ -63,7 +65,18 @@ const LyricsGame: React.FC = () => {
           <br />
           takecare cutie..
         </div>
-        <div className={styles.heart}>❤️</div>
+        
+        {!giftClaimed ? (
+          <button className={styles.button} onClick={() => setGiftClaimed(true)}>
+            Claim Gift 🎁
+          </button>
+        ) : (
+          <div className={styles.message} style={{ marginTop: '20px', color: '#ff007f' }}>
+            a small gift will reach ur home..:)
+          </div>
+        )}
+        
+        <div className={styles.heart} style={{ marginTop: '30px' }}>❤️</div>
       </div>
     );
   }
