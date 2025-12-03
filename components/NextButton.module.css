@@ -1,0 +1,30 @@
+.container {
+    margin-top: -20px;
+    /* Pull closer to dog */
+    z-index: 10;
+}
+
+.button {
+    background-color: #ffffff;
+    /* White */
+    color: #000;
+    /* Black text */
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, background-color 0.2s;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    background-color: #f0f0f0;
+}
+
+.button:active {
+    transform: scale(0.95);
+}

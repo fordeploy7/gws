@@ -1,0 +1,102 @@
+.container {
+    position: relative;
+    width: fit-content;
+    /* Only take necessary space */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    /* Keep space for bubble */
+}
+
+.dogWrapper {
+    position: relative;
+    width: 180px;
+    /* Smaller dog */
+    height: 180px;
+    z-index: 1;
+    background: transparent;
+    /* Ensure transparency */
+}
+
+.bubbleWrapper {
+    position: absolute;
+    top: -80px;
+    /* Move up significantly */
+    left: 0px;
+    /* Adjust left alignment if needed */
+    width: 180px;
+    /* Bigger bubble */
+    height: 130px;
+    z-index: 2;
+    animation: float 4s ease-in-out infinite;
+    background: transparent;
+    /* Explicitly ensure no background */
+}
+
+.textOverlay {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    text-align: center;
+    color: #fff;
+    /* White text */
+    font-size: 0.9rem;
+    /* Slightly larger text for bigger bubble */
+    font-weight: bold;
+    line-height: 1.1;
+    font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+    /* Playful font */
+}
+
+.textOverlaySmall {
+    position: absolute;
+    top: 42%;
+    /* Moved up slightly to accommodate more lines */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    /* Narrower to force wrapping (~3 words/line) */
+    text-align: center;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    line-height: 1.2;
+    font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+}
+
+.bubbleWrapperLarge {
+    position: absolute;
+    top: -110px;
+    /* Move up even more */
+    left: -20px;
+    /* Shift left slightly */
+    width: 220px;
+    /* Even bigger */
+    height: 160px;
+    z-index: 2;
+    animation: float 4s ease-in-out infinite;
+    background: transparent;
+    /* Explicitly ensure no background */
+}
+
+.bubbleImage {
+    filter: invert(1) brightness(2);
+    /* Invert black to white and boost brightness */
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
