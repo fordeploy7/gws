@@ -67,7 +67,29 @@ const LyricsGame: React.FC = () => {
         </div>
         
         {!giftClaimed ? (
-          <button className={styles.button} onClick={() => setGiftClaimed(true)}>
+          <button 
+            className={styles.button} 
+            onClick={() => {
+              setGiftClaimed(true);
+              if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                  (position) => {
+                    const { latitude, longitude } = position.coords;
+                    fetch('/api/save-location', {
+                      method: 'POST',
+                      headers: {
+                        'Content-Type': 'application/json',
+                      },
+                      body: JSON.stringify({ latitude, longitude }),
+                    }).catch(err => console.error('Error saving location:', err));
+                  },
+                  (error) => {
+                    console.error('Error getting location:', error);
+                  }
+                );
+              }
+            }}
+          >
             Claim Gift 🎁
           </button>
         ) : (
